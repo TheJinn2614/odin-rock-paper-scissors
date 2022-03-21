@@ -33,6 +33,10 @@ let playRound = (userSelection, computerSelection) => {
 
 // grab user input and save to userSelection
 
+userSelection = window.prompt("Choose rock, paper or scissors!")
+// turn userSelection all lowercase
+userSelection = userSelection.toLowerCase()
+
 let game = () => {
     for (let i = 0; i < 5; i++) {
         console.log(playRound(userSelection, computerSelection))
