@@ -1,5 +1,5 @@
 let computerPlay = () => {
-    const words = ["Rock", "Paper", "Scissors"];
+    const words = ["rock", "paper", "scissors"];
     let num = Math.floor(Math.random() * 3);
     let computerResult = words[num];
     return computerResult
@@ -7,18 +7,7 @@ let computerPlay = () => {
 }
 // computerPlay();
 
-let userPlay = () => {
-    const words = ["Rock", "Paper", "Scissors"];
-    let num = Math.floor(Math.random() * 3);
-    let userResult = words[num];
-    return userResult
-    // console.log(userResult)
-}
-// userPlay();
-
 let playRound = (userSelection, computerSelection) => {
-
-    // dont forget to come back and .toLowerCase
 
     // This could also be done with switch but I prefer if statements
     if (userSelection === "rock" && computerSelection === "paper") {
@@ -36,4 +25,6 @@ let playRound = (userSelection, computerSelection) => {
     }
 }
 
-playRound(userPlay, computerPlay);
+const userSelection = "scissors";
+const computerSelection = computerPlay();
+console.log(playRound(userSelection, computerSelection));
