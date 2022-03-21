@@ -12,10 +12,16 @@ let playRound = (userSelection, computerSelection) => {
     // This could also be done with switch but I prefer if statements
     if (userSelection === "rock" && computerSelection === "paper") {
         return "You lose! Paper beats Rock"
+    } else if (userSelection === "rock" && computerSelection === "scissors") {
+        return "You win! Rock beats Scissors"
     } else if (userSelection === "paper" && computerSelection === "scissors") {
         return "You lose! Scissors beats Paper"
+    } else if (userSelection === "paper" && computerSelection === "rock") {
+        return "You win! Paper beats Rock"
     } else if (userSelection === "scissors" && computerSelection === "rock") {
         return "You lose! Rock beats Scissors"
+    } else if (userSelection === "scissors" && computerSelection === "paper") {
+        return "You win! Scissors beats Paper"
     } else if (userSelection === "rock" && computerSelection === "rock") {
         return "It's a tie! Rock and Rock"
     } else if (userSelection === "paper" && computerSelection === "paper") {
