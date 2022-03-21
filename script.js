@@ -3,9 +3,9 @@ let computerPlay = () => {
     let num = Math.floor(Math.random() * 3);
     let computerResult = words[num];
     return computerResult
-    // console.log(computerResult);
 }
-// computerPlay();
+
+const computerSelection = computerPlay();
 
 let playRound = (userSelection, computerSelection) => {
 
@@ -31,6 +31,10 @@ let playRound = (userSelection, computerSelection) => {
     }
 }
 
-const userSelection = "scissors";
-const computerSelection = computerPlay();
-console.log(playRound(userSelection, computerSelection));
+// grab user input and save to userSelection
+
+let game = () => {
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound(userSelection, computerSelection))
+    }
+}
